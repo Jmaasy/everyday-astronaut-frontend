@@ -1,0 +1,403 @@
+body, html {
+    margin:0;
+    padding:0;
+    /* background:#282828; */
+}
+
+section {
+    position: relative;
+    height:640px;
+    width:100%;
+    background:#282828;
+}
+
+section div.wrapper {
+    display:none;
+    position: absolute;
+    height: calc(100% - 60px);
+    max-width: 900px;
+    top:-16px;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+
+.title {
+    font-family: "Oxanium";
+    color: #FF4200;
+    font-size: 1.1em;
+    letter-spacing: 4px;
+    background: #292929;
+    width: 100%;
+    display: block;
+}
+
+.text {
+    z-index: 20;
+    position: relative;
+    background: #292929;
+    padding: 0px 24px 0 0;
+}
+
+.title .image {
+    position: absolute;
+    left: 0;
+    z-index:19;
+    width: 100%;
+    top: 3px;
+    display: inline-block;
+    height: 13px;
+    background-image: url("../images/dot.svg");
+}
+
+.date {
+    font-family:"Public Sans";
+    color:#fff;
+    font-size: 1.2em;
+    margin-top: 10px;
+    display: block;
+}
+
+.date hr {
+    width: 60px;
+    margin: 12px 0 0;
+    border: 1px solid #ff4200;
+}
+
+.mission_details {
+    width: 48%;
+    margin-top: 26px;
+    border: 1px solid #fff;
+    padding: 30px 12px 12px;
+    background: #303030;
+    color: #fff;
+    font-family: "Public Sans";
+    font-size: .9em;
+    position: relative;
+    font-weight:100;
+}
+
+img.after {
+    position: absolute;
+    width: calc(100% + 2px);
+    left: -1px;
+    bottom: -15px;
+    z-index: 1;
+}
+
+.mission_details .details {
+    z-index: 2;
+    position: relative;
+    max-width: 306ch;
+}
+
+.mission_title {
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    padding: 5px;
+    background: #ff4200;
+    width: 120px;
+    text-align: center;
+    font-family: "Oxanium";
+    letter-spacing: 3px;
+    font-size: 1em;
+}
+
+.launch_site {
+    width: 48%;
+    position: relative;
+}
+
+.launch_site img.continent {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.launch_site img.site {
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    margin: 0 -40px -22px 0;
+    right: 0;
+}
+
+.ealogo {
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+}
+
+.right {
+    height: 100px;
+    position: absolute;
+    left: 55%;
+    top: 40px;
+    width:45%;
+}
+
+.launch_detail {
+    margin-top:0px;
+}
+
+.launch_detail .item {
+    position: relative;
+    display:block;
+    margin-top: 20px;
+}
+
+.launch_detail .item span:first-of-type {
+    font-family: "Oxanium";
+    color:#fff;
+    font-size: .9em;
+}
+
+.launch_detail .item span:not(:last-of-type):not(:first-of-type) {
+    font-family: "Public Sans";
+    color:#fff;
+    display:block;
+    font-weight: 100;
+    font-size: .8em;
+}
+
+.launch_detail #payload .content:first-of-type:hover {
+    display:none;
+}
+.launch_detail #payload .content:not(.expanded):hover .launch_detail #payload .content.expanded {
+    display:block;
+}
+
+.launch_detail .item img {
+    margin-top: -16px;
+    width: 80%;
+    position: absolute;
+    top: 38px;
+}
+
+.rocket_image {
+    position: absolute;
+    top: 0;
+    right:42px;
+}
+
+.rocket_image img {
+    width: 62.5px;
+    position: relative;
+    z-index: 2;
+}
+
+.recovery_details {
+    width: 60%;
+    border: 1px solid #fff;
+    padding: 22px 12px 12px 12px;
+    background: #303030;
+    color: #fff;
+    font-size: .9em;
+    position: relative;
+    font-weight: 100;
+    margin-top: 50px;
+    font-family: "Oxanium";
+}
+
+.recovery_details .recovery_title {
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    padding: 5px;
+    background: #ff4200;
+    width: 206px;
+    text-align: center;
+    font-family: "Oxanium";
+    letter-spacing: 3px;
+    font-size: .8em;
+}
+
+.recovery_details .details {
+    font-weight:lighter;
+    font-size:.9em;
+}
+
+.recovery_details .details span {
+    display:block;
+}
+
+.landing_locations {
+    margin: 18px 0;
+}
+
+.landing_locations .landing_pads {
+    width: 53%;
+    display: inline-block;
+}
+
+.landing_locations .landing_pads img {
+    display: none;
+    width: calc(48% - 20px);
+}
+
+.landing_locations .landing_pads img:first-of-type {
+    margin: 0 6px 0 0;
+}
+
+.landing_locations .landing_pads img:last-of-type {
+    margin: 0 0 0 6px;
+}
+
+.landing_locations .landing_ship {
+    margin: 0 0 0 -18px;
+    width: 43%;
+    display: inline-block;
+}
+
+.landing_locations .landing_ship img {
+    height: 100px;
+    display:none;
+}
+
+.launch_location {
+    width: fit-content;
+    border: 1px solid #fff;
+    padding: 12px;
+    background: #303030;
+    color: #fff;
+    font-size: .9em;
+    position: relative;
+    font-weight: 100;
+    margin-top: 18px;
+    font-family: "Oxanium";
+    display: block;
+}
+
+.launch_location span {
+    display: block;
+}
+
+.launch_location span:last-of-type {
+    font-family: "Public Sans";
+    font-weight:100;
+}
+
+.expanded {
+    display:none;
+}
+
+.website {
+    width:100%;
+}
+
+.middlewebsite {
+    margin-bottom:25px;
+}
+
+.left_t hr {
+    position: absolute;
+    width: 28px;
+    bottom: 9px;
+    height: 1px;
+    margin: 0;
+    right: -5px;
+    border: none;
+    background: #fff;
+    z-index: 1;
+    transform: rotate(135deg);
+}
+
+.left_t::after {
+    width: 0px;
+    height: 0px;
+    background: #fff;
+    content: '';
+    position: absolute;
+    bottom: 0;
+}
+
+.left_t::after {
+    right: -1px;
+    border-top: 10px solid #303030;
+    border-right: 10px solid #292929;
+    border-left: 10px solid #303030;
+    border-bottom: 10px solid #292929;
+    bottom: -1px;
+}
+
+.recovery_details.left_t::after {
+    border-top: 8px solid #303030;
+    border-right: 8px solid #292929;
+    border-left: 8px solid #303030;
+    border-bottom: 8px solid #292929;
+}
+
+.launch_location.left_t::after {
+    border-top: 5px solid #303030;
+    border-right: 5px solid #292929;
+    border-left: 5px solid #303030;
+    border-bottom: 5px solid #292929;
+}
+
+.recovery_details.left_t hr {
+    width: 22px;
+    right: -4px;
+    bottom: 7px;
+}
+
+.launch_location.left_t hr {
+    width: 14px;
+    right: -3px;
+    bottom: 4px;
+}
+
+select {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+}
+
+.hover {
+    font-family: "Public Sans";
+    color: #fff;
+    display: block;
+    font-weight: 100;
+    font-size: .8em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding:0 5px 0 0;
+    z-index: 10;
+    background: #292929;
+    pointer-events:none;        
+}
+
+.item > img {
+    pointer-events: none;
+}
+
+#line {
+    position:absolute;
+    width:2px;
+    margin-top:-1px;
+    background-color:red;
+}
+
+#line_from {
+    position: absolute;
+}
+
+#loader {
+    display:block;
+}
+
+#loader img {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
