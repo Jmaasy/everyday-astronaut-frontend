@@ -1,0 +1,339 @@
+.launch-container {
+    padding:20px 0 0;
+    background: #282828;
+    position: relative;
+}
+
+.title-wrapper {
+    font-family: "Oxanium";
+    color: #FF4200;
+    font-size: 1.3em;
+    letter-spacing: 4px;
+    background: #292929;
+    width: 100%;
+    padding:0;
+}
+
+.title-wrapper div {
+    display: inline-block;
+    z-index: 300;
+    position: relative;
+    background: #282828;
+    padding-right: 10px;
+}
+
+.grid {
+    margin: 0 20px;
+}
+
+.launch_location_details {
+    width: 100%;
+}
+
+.vehicle img {
+    height: 440px;
+}
+
+.vehicle {
+    z-index: 100;
+}
+
+.title-wrapper .image {
+    position: absolute;
+    left: 17%;
+    z-index: 19;
+    width: 81%;
+    top: 26px;
+    display: inline-block;
+    height: 13px;
+    background-image: url(../images/dot.svg);
+}
+
+.launch-date {
+    font-family: "Public Sans";
+    color: #fff;
+    font-size: 1em;
+    display: block;
+    letter-spacing: normal;
+}
+
+.launch-date hr {
+    margin: 6px 0 0;
+    width: 60px;
+    background: #ff4200;
+    height: 2px;
+    border: none;
+}
+
+.yeet {
+    background:#282828;
+}
+
+.mission_details, .launch_location, .recovery_details {
+    border: 1px solid #fff;
+    padding: 30px 12px 12px;
+    background: #303030 !important;
+    color: #fff;
+    font-family: "Public Sans";
+    font-size: .7em;
+    letter-spacing: normal;
+    position: relative;
+    font-weight:100;
+    margin: 30px 10px 0 0;
+    width: calc(100% - 20px);
+}
+
+
+.mission_details .details {
+    z-index: 2;
+    position: relative;
+    max-width: 306ch;
+}
+
+.mission_title, .recovery_title  {
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    padding: 5px;
+    background: #ff4200;
+    width: 120px;
+    text-align: center;
+    font-family: "Oxanium";
+    letter-spacing: 3px;
+    font-size: 1em;
+}
+
+.left_t hr {
+    position: absolute;
+    width: 28px;
+    bottom: 9px;
+    height: 1px;
+    margin: 0;
+    right: -5px;
+    border: none;
+    background: #fff;
+    z-index: 1;
+    transform: rotate(135deg);
+}
+
+.left_t::after {
+    width: 0px;
+    height: 0px;
+    background: #fff;
+    content: '';
+    position: absolute;
+    bottom: 0;
+}
+
+.left_t::after {
+    right: -1px;
+    border-top: 10px solid #303030;
+    border-right: 10px solid #292929;
+    border-left: 10px solid #303030;
+    border-bottom: 10px solid #292929;
+    bottom: -1px;
+}
+
+.recovery_details.left_t::after {
+    border-top: 8px solid #303030;
+    border-right: 8px solid #292929;
+    border-left: 8px solid #303030;
+    border-bottom: 8px solid #292929;
+}
+
+.launch_location.left_t::after {
+    border-top: 5px solid #303030;
+    border-right: 5px solid #292929;
+    border-left: 5px solid #303030;
+    border-bottom: 5px solid #292929;
+}
+
+.recovery_details.left_t hr {
+    width: 22px;
+    right: -4px;
+    bottom: 7px;
+}
+
+.launch_location.left_t hr {
+    width: 14px;
+    right: -3px;
+    bottom: 4px;
+}
+
+.continent {
+    margin-top:20px;
+}
+
+.site {
+    position: absolute;
+    width: 100px;
+    bottom: 20px;
+    right: 45px;
+}
+
+.logo {
+    margin-top: -20px;
+}
+
+.logo img {
+    width: 25%;
+}
+
+.logo-container {
+    padding:0 0 20px;
+}
+
+.landing-grid div span img {
+    vertical-align: top;
+    margin: 0 2px;
+}
+
+.landing-grid div span.landing-pad img {
+    width: 100px;
+}
+
+.landing-grid div span.landing-ship img {
+    height: 144px;
+}
+
+.landing-grid > div {
+    text-align: right;
+    margin-top: 16px;
+}
+
+.launch-content {
+    margin: 20px 20px;
+}
+
+@media only screen and (max-width: 639px)  {
+    .logo img {
+        width: 40%;
+    }
+
+    .vehidcle {
+        margin: 20px 0px;
+    }
+
+    .vehicle img {
+        height: 300px;
+    }
+    
+    .landing-pad img {
+        width: 24% !important;
+    }
+
+    .landing-ship img {
+        width: 45%;
+        height: unset !important;
+    }
+    
+    .launch_location {
+        text-align: left !important;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+.launch_location .details p {
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.launch-information .launch-info-item {
+    position: relative;
+    width:109%;
+    display:block;
+    margin-top: 20px;
+}
+
+.launch-information .launch-info-item span:first-of-type {
+    font-family: "Oxanium";
+    color:#fff;
+    font-size: .9em;
+}
+
+.launch-information .launch-info-item span:not(:last-of-type):not(:first-of-type) {
+    font-family: "Public Sans";
+    color:#fff;
+    display:block;
+    font-weight: 100;
+    font-size: .8em;
+}
+
+.launch-information .launch-info-item img {
+    margin-top: -16px;
+    position: absolute;
+    top: 38px;
+}
+
+.recovery_details {
+    margin-top: 55px;
+    padding: 30px 100px 14px 14px;
+    width: fit-content;
+}
+
+.recovery_details .recovery_title {
+    font-size: 14px;
+    left: 14px;
+}
+
+.recovery_details .details span {
+    display: block;
+    font-size: 16px;
+}
+
+@media print, screen and (max-width: 39.9em){
+    .medium-9 .launch-information .launch-info-item {
+        width: 114%;
+    }
+
+    .medium-3.vehicle {
+        text-align: right;
+    }   
+
+    .logo-container {
+        margin-top: 40px;
+    }
+}
+
+@media print, screen and (min-width: 40em) and (max-width: 64em){
+    .medium-9 .launch-information .launch-info-item {
+        width: 120%;
+    }
+    
+    .medium-3.vehicle {
+        text-align: right;
+    }    
+}
+
+@media only screen and (min-width: 640px) and (max-width: 940px)  {
+    .logo img {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .launch_location {
+        width: auto;
+        padding: 5px 15px 5px 10px;
+        min-width: 200px;
+        text-align: left !important;
+        font-size: 14px;
+        position: absolute;
+        bottom: -50px;
+        right: 282px;
+    }
+}
+
+@media (max-width: 639px) {
+    .recovery_details {
+        display: none;
+    }
+}
+
+@media (max-width: 1037px) {
+    .landing-ship img {
+        height: 140px !important;
+    }
+}

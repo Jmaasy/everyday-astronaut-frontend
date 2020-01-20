@@ -4,7 +4,8 @@ const companyMapping = [
 ]
 
 var generateElement = function(l) {
-    if(Object.getOwnPropertyNames(l.mission).length > 0) {
+    if(l.missions.length > 0) {
+    // if(Object.getOwnPropertyNames(l.mission).length > 0) {
         generateTitle(l);
         generateDate(l);
         generateMissionDetails(l);
@@ -23,8 +24,8 @@ var generateElement = function(l) {
 }
 
 var generateTitle = function(l) {
-    let agency = l.agency.name.toUpperCase();
-    let mission = l.mission.name.toUpperCase();
+    let agency = l.rocket.agency.name.toUpperCase();
+    let mission = l.missions[0].name.toUpperCase();
     const rocket = l.rocket.name.toUpperCase();
 
     for(let company of companyMapping) {
@@ -43,7 +44,7 @@ var generateDate = function(l) {
         "July", "August", "September", "October", "November", "December"
     ];
 
-    const date = l.launch.target.split(', ')[1];
+    const date = l.net.split(', ')[1];
     const gmt_locale = new Date(date);
     const gmt_locale_am_pm = convertToAMPM(gmt_locale);
     const utc_hour = gmt_locale.getUTCHours();
@@ -56,7 +57,7 @@ var generateDate = function(l) {
 
 var generateMissionDetails = function(l) {
     const details = document.querySelector('.mission_details .details');
-    const text = l.mission.description.slice(0, 306);
+    const text = l.missions[0].description.slice(0, 306);
     details.innerHTML = text;
 }
 
@@ -65,13 +66,13 @@ var generateLaunchDetails = function(l) {
     const orbit_el = document.querySelectorAll('.launch_detail .item#orbit span.content');
     const type_el = document.querySelectorAll('.launch_detail .item#type span.content');
     const rocket_el = document.querySelectorAll('.launch_detail .item#rocket span.content');
-    const payload_addition = (l.mission.name.length > 39) ? '...' : '';
-    const payload_content = l.mission.name  .slice(0, 39) + payload_addition;
+    const payload_addition = (l.missions[0].name.length > 39) ? '...' : '';
+    const payload_content = l.missions[0].name  .slice(0, 39) + payload_addition;
 
     payload_el[0].innerHTML = payload_content;
-    payload_el[1].innerHTML = l.mission.name;
-    orbit_el.forEach(x => x.innerHTML = (typeof l.mission.orbit == "string")? l.mission.orbit : l.mission.orbit[1]);
-    type_el.forEach(x => x.innerHTML = l.mission.type);
+    payload_el[1].innerHTML = l.missions[0].name;
+    orbit_el.forEach(x => x.innerHTML = (typeof l.missions[0].orbit == "string")? l.missions[0].orbit : l.missions[0].orbit[1]);
+    type_el.forEach(x => x.innerHTML = l.missions[0].type);
     rocket_el.forEach(x => x.innerHTML = l.rocket.name);
 }
 
@@ -83,7 +84,7 @@ var generateRecovery = function(l) {
         const first = document.querySelector('.recovery_details .details span:first-of-type');
         const last = document.querySelector('.recovery_details .details span:last-of-type');
 
-        if(l.recovery.landings.length > 1) {
+        if(l.recovery.cores.length > 1) {
             const core_booster = l.recovery.landings.shift();
             last.innerHTML = `CENTER CORE: ${core_booster.landing_vehicle}`;    
 
